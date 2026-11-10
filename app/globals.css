@@ -1,7 +1,4 @@
-/* ---------- Brand tokens ----------
- * Default theme is purple (from the logo). The teal theme below overrides
- * the same tokens; pick one in lib/content.ts (site.theme).
- */
+/* ---------- Brand tokens (taken from the She Shall Rise logo) ---------- */
 :root {
   --brand-950: #1d0733;
   --brand-900: #2a0c4a;
@@ -29,21 +26,6 @@
   --radius: 14px;
   --shadow: 0 10px 30px -12px color-mix(in srgb, var(--brand-900) 25%, transparent);
   --header-h: 76px;
-}
-
-/* Teal variation: same gold accents, deep teal in place of purple. */
-:root[data-theme="teal"] {
-  --brand-950: #032a2c;
-  --brand-900: #063d40;
-  --brand-800: #0a5054;
-  --brand-700: #0e6a6d;
-  --brand-600: #168787;
-  --brand-100: #e2f2f1;
-  --brand-50: #f3faf9;
-
-  --ink: #1e2c2d;
-  --muted: #5b6c6d;
-  --line: #dbe8e7;
 }
 
 *,
@@ -958,4 +940,11 @@ p {
   font-size: 0.85rem;
   color: var(--muted);
   margin: 20px 0 0;
+}
+
+/* The first card (Nominate a Girl) spans the full row. */
+.ways-grid .way:first-child {
+  grid-column: 1 / -1;
+  border-top-color: var(--brand-700);
+  background: linear-gradient(135deg, var(--brand-50), var(--gold-100));
 }

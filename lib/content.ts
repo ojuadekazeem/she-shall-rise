@@ -1,13 +1,13 @@
 export const site = {
-  /**
-   * Default color theme: "purple" (matches the logo) or "teal".
-   * Visitors can also pick one by link: add ?theme=teal or ?theme=purple to any page URL.
-   */
-  theme: "purple" as "purple" | "teal",
   name: "She Shall Rise Foundation",
   tagline: "Rescue Her. Restore Her. Empower Her to Rise.",
   // TODO: replace with the Foundation's real contact details
   email: "hello@sheshallrise.org",
+  /**
+   * Link to the "Nominate a Girl" Google Form. Paste the form's share link
+   * between the quotes. While it is empty, the button opens an email instead.
+   */
+  nominateFormUrl: "" as string,
   vision:
     "A world where every vulnerable girl is rescued from exploitation and harmful circumstances, restored in dignity and hope, and empowered to rise into the life and purpose God intended for her.",
   mission:

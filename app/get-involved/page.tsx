@@ -4,10 +4,29 @@ import { site } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Get Involved",
-  description: "Give, partner, mentor, or pray with She Shall Rise Foundation.",
+  description:
+    "Nominate a girl who needs help, or give, partner, mentor, or pray with She Shall Rise Foundation.",
 };
 
-const ways = [
+type Way = {
+  id: string;
+  title: string;
+  text: string;
+  action: string;
+  subject: string;
+  /** Opens this link instead of an email when set. */
+  href?: string;
+};
+
+const ways: Way[] = [
+  {
+    id: "nominate",
+    title: "Nominate a Girl",
+    text: "Know a girl whose circumstances put her at risk of exploitation, early marriage, domestic servitude, trafficking, abuse, or losing her education? Tell us about her, and a member of our team will reach out to you.",
+    action: "Nominate a girl",
+    subject: "Nominating a girl",
+    href: site.nominateFormUrl,
+  },
   {
     id: "give",
     title: "Give",
@@ -53,12 +72,18 @@ export default function GetInvolved() {
             <div key={w.id} id={w.id} className="card way">
               <h2>{w.title}</h2>
               <p>{w.text}</p>
-              <a
-                className="btn btn-brand"
-                href={`mailto:${site.email}?subject=${encodeURIComponent(w.subject)}`}
-              >
-                {w.action}
-              </a>
+              {w.href ? (
+                <a className="btn btn-brand" href={w.href} target="_blank" rel="noopener noreferrer">
+                  {w.action}
+                </a>
+              ) : (
+                <a
+                  className="btn btn-brand"
+                  href={`mailto:${site.email}?subject=${encodeURIComponent(w.subject)}`}
+                >
+                  {w.action}
+                </a>
+              )}
             </div>
           ))}
         </div>

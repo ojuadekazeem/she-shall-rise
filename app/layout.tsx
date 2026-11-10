@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Great_Vibes, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/lib/content";
+import "./tailwind.css";
 import "./globals.css";
 
 const serif = Cormorant_Garamond({

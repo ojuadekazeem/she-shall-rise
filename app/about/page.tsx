@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Gallery from "@/components/Gallery";
 import PageHero from "@/components/PageHero";
 import { declaration, site } from "@/lib/content";
 
@@ -96,6 +97,13 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <Gallery
+        eyebrow="The Girls We Rise For"
+        title="She is the reason"
+        intro="Poverty should never determine a girl's destiny, and vulnerability should never become an invitation for exploitation."
+        startAt={4}
+      />
 
       <section className="declaration">
         <div className="container narrow center">

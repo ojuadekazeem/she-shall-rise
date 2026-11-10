@@ -178,3 +178,16 @@ export const declaration = {
 };
 
 export const pillars = ["Rescue", "Protect", "Educate", "Restore", "Empower"];
+
+/** Gallery photos (from Unsplash), optimized copies in public/gallery. */
+export const gallery = [
+  { imgUrl: "/gallery/girl-01.jpg", alt: "A young girl in a cream dress stands thoughtfully among other children" },
+  { imgUrl: "/gallery/girl-04.jpg", alt: "A little girl with braided hair looks up with hope in her eyes" },
+  { imgUrl: "/gallery/girl-08.jpg", alt: "Two young girls, one in a red headscarf, stand together in soft light" },
+  { imgUrl: "/gallery/girl-03.jpg", alt: "Black-and-white portrait of a girl with a steady, serious gaze" },
+  { imgUrl: "/gallery/girl-05.jpg", alt: "A girl in a white dress, embraced from behind by a friend" },
+  { imgUrl: "/gallery/girl-07.jpg", alt: "A girl stands tall in a patterned dress under an open sky" },
+  { imgUrl: "/gallery/girl-02.jpg", alt: "A small girl in an orange dress stands alone on a dusty street" },
+  { imgUrl: "/gallery/girl-06.jpg", alt: "A young girl sits quietly on a doorstep beside other children" },
+  { imgUrl: "/gallery/girl-09.jpg", alt: "A girl in an orange skirt stands in a concrete doorway" },
+];

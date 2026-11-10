@@ -1,0 +1,11 @@
+/*
+ * Tailwind v4, without its "preflight" base reset, so the site's own
+ * styles in globals.css stay in charge. Utilities are available for
+ * components in components/ui (shadcn-style).
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* The site is light-only: dark: classes apply only under an explicit .dark class. */
+@custom-variant dark (&:where(.dark, .dark *));

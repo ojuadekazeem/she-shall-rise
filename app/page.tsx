@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Gallery from "@/components/Gallery";
 import { pillars, programs, promise, site, values } from "@/lib/content";
 
 export default function Home() {
@@ -54,6 +55,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Gallery
+        eyebrow="Why We Exist"
+        title="Every face, a future"
+        intro="Behind every statistic is a girl with a name, a dream, and a purpose God has not forgotten."
+        tinted
+      />
 
       <section className="belief">
         <div className="container narrow">

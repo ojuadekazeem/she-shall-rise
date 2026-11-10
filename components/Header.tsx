@@ -14,7 +14,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <Image src="/logo-emblem.png" alt="" width={52} height={49} className="brand-mark" priority />
+          <Image src="/she-shall-rise-emblem.png" alt="" width={52} height={52} className="brand-mark" priority />
           <span className="brand-text">
             <span>
               She Shall <em>Rise</em>

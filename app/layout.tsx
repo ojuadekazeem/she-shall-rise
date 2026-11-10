@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: site.name,
     description: site.tagline,
     type: "website",
-    images: ["/logo-full.png"],
+    images: ["/she-shall-rise-logo.png"],
   },
 };
 

@@ -10,7 +10,7 @@ export default function Home() {
         <div className="hero-glow" aria-hidden="true" />
         <div className="container hero-inner">
           <div className="hero-badge">
-            <Image src="/logo-emblem.png" alt="" width={136} height={129} priority />
+            <Image src="/she-shall-rise-emblem.png" alt="" width={136} height={136} priority />
           </div>
           <p className="eyebrow light">She Shall Rise Foundation</p>
           <h1>

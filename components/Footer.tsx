@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="footer-logo">
-            <Image src="/logo-full.png" alt={site.name} width={208} height={202} />
+            <Image src="/she-shall-rise-logo.png" alt={site.name} width={208} height={211} />
           </div>
           <p className="footer-tagline">{site.tagline}</p>
         </div>

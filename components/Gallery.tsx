@@ -11,7 +11,7 @@ type Props = {
 };
 
 /** Each photo appears this many times so the sphere looks full. */
-const REPEATS = 3;
+const REPEATS = 2;
 
 export default function Gallery({ eyebrow = "Gallery", title, intro, startAt = 0, tinted }: Props) {
   const ordered = [...gallery.slice(startAt), ...gallery.slice(0, startAt)];

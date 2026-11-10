@@ -187,11 +187,17 @@ export const pillars = ["Rescue", "Protect", "Educate", "Restore", "Empower"];
 /** Gallery photos (from Unsplash), optimized copies in public/gallery. The title shows when a photo is opened. */
 export const gallery = [
   { imgUrl: "/gallery/girl-01.jpg", title: "You are valuable.", alt: "A young girl in a cream dress stands thoughtfully among other children" },
+  { imgUrl: "/gallery/girl-13.jpg", title: "We will see you.", alt: "A smiling young girl in a green sweatshirt holds a small bottle" },
   { imgUrl: "/gallery/girl-04.jpg", title: "You are capable.", alt: "A little girl with braided hair looks up with hope in her eyes" },
+  { imgUrl: "/gallery/girl-10.jpg", title: "She will not be defined by what happened to her.", alt: "Black-and-white portrait of a young woman in a patterned cardigan" },
   { imgUrl: "/gallery/girl-08.jpg", title: "Your story is not over.", alt: "Two young girls, one in a red headscarf, stand together in soft light" },
+  { imgUrl: "/gallery/girl-12.jpg", title: "We will hear you.", alt: "A young girl carries her baby sibling on her back inside a tin-roofed home" },
   { imgUrl: "/gallery/girl-03.jpg", title: "She will be protected.", alt: "Black-and-white portrait of a girl with a steady, serious gaze" },
+  { imgUrl: "/gallery/girl-15.jpg", title: "She will not be defined by poverty.", alt: "A young girl carries a large bucket of purple flowers along a street" },
   { imgUrl: "/gallery/girl-05.jpg", title: "She will be educated.", alt: "A girl in a white dress, embraced from behind by a friend" },
+  { imgUrl: "/gallery/girl-11.jpg", title: "We will protect your dignity.", alt: "A child in a knitted cap and orange shirt stands in a dry, open field" },
   { imgUrl: "/gallery/girl-07.jpg", title: "She will be restored.", alt: "A girl stands tall in a patterned dress under an open sky" },
+  { imgUrl: "/gallery/girl-14.jpg", title: "God has not forgotten her.", alt: "Young children on a mountain path, an older girl carrying a baby on her back" },
   { imgUrl: "/gallery/girl-02.jpg", title: "She will be empowered.", alt: "A small girl in an orange dress stands alone on a dusty street" },
   { imgUrl: "/gallery/girl-06.jpg", title: "You were created for more.", alt: "A young girl sits quietly on a doorstep beside other children" },
   { imgUrl: "/gallery/girl-09.jpg", title: "She shall rise.", alt: "A girl in an orange skirt stands in a concrete doorway" },

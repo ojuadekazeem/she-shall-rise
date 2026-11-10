@@ -904,52 +904,47 @@ p {
   }
 }
 
-/* ---------- Gallery (card fan carousel) ---------- */
+/* ---------- Gallery (3D image sphere) ---------- */
 .gallery {
-  overflow: hidden; /* fanned cards and their entry animation stay inside the section */
-  padding-bottom: 72px;
+  overflow: hidden;
 }
 .gallery .section-head {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
-.fan-layout {
-  height: min(31rem, 70vh);
+.sphere-gallery {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
-.fan-card {
-  position: absolute;
-  width: min(17rem, 30vh);
-  aspect-ratio: 3 / 4;
-  border-radius: 18px;
-  overflow: hidden;
-  background: var(--plum-100);
-  border: 5px solid #fff;
-  box-shadow: 0 18px 40px -14px rgba(42, 12, 74, 0.45);
-  will-change: transform;
-  opacity: 0; /* gsap fades each card in */
-}
-.fan-card img {
-  height: 100%; /* overrides the global img { height: auto } */
+/* The site's global img { height: auto } would beat Tailwind's h-full here. */
+.sphere-gallery img {
+  height: 100%;
   max-width: none;
 }
-@media (max-width: 1023px) {
-  .fan-layout { height: min(28rem, 70vh); }
-  .fan-card { width: min(15rem, 30vh); }
+/* Close button on the enlarged photo (bg-opacity-* no longer exists in Tailwind v4). */
+.sphere-gallery .fixed button {
+  background: rgba(29, 7, 51, 0.6);
 }
-@media (max-width: 767px) {
-  .fan-layout { height: min(28rem, 70vh); }
-  .fan-card { width: min(13rem, 30vh); border-width: 4px; }
+.sphere-gallery .fixed button:hover {
+  background: rgba(29, 7, 51, 0.85);
 }
-@media (max-width: 639px) {
-  .fan-layout { height: min(26rem, 70vh); }
-  .fan-card { width: min(11rem, 30vh); }
+.sphere-gallery .fixed h3 {
+  font-family: var(--font-serif-stack);
+  font-size: 1.6rem;
+  color: var(--plum-800);
 }
-@media (max-width: 479px) {
-  .fan-layout { height: min(22rem, 70vh); }
-  .fan-card { width: min(9.5rem, 30vh); border-width: 3px; border-radius: 12px; }
+.gallery-hint {
+  text-align: center;
+  color: var(--plum-700);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 20px 0 4px;
 }
 .gallery-note {
   text-align: center;
   font-size: 0.85rem;
   color: var(--muted);
-  margin: 12px 20px 0;
+  margin: 0;
 }

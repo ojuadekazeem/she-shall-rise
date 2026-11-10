@@ -1,17 +1,30 @@
-import SocialCards from "@/components/ui/card-fan-carousel";
+import SphereGallery from "@/components/SphereGallery";
 import { gallery } from "@/lib/content";
 
 type Props = {
   eyebrow?: string;
   title: string;
   intro?: string;
-  /** Rotate the photo order so the same gallery opens on a different face per page. */
+  /** Rotate the photo order so each page's sphere is arranged differently. */
   startAt?: number;
   tinted?: boolean;
 };
 
+/** Each photo appears this many times so the sphere looks full. */
+const REPEATS = 3;
+
 export default function Gallery({ eyebrow = "Gallery", title, intro, startAt = 0, tinted }: Props) {
-  const cards = [...gallery.slice(startAt), ...gallery.slice(0, startAt)];
+  const ordered = [...gallery.slice(startAt), ...gallery.slice(0, startAt)];
+  const images = Array.from({ length: REPEATS }, (_, r) =>
+    ordered.map((p, i) => ({
+      id: `${r}-${i}`,
+      src: p.imgUrl,
+      alt: p.alt,
+      title: p.title,
+      description: p.alt,
+    }))
+  ).flat();
+
   return (
     <section className={`section gallery${tinted ? " tinted" : ""}`} aria-label={title}>
       <div className="container">
@@ -20,11 +33,12 @@ export default function Gallery({ eyebrow = "Gallery", title, intro, startAt = 0
           <h2>{title}</h2>
           {intro && <p>{intro}</p>}
         </div>
+        <SphereGallery images={images} />
+        <p className="gallery-hint">Drag to turn the sphere. Tap a photo to see it up close.</p>
+        <p className="gallery-note">
+          Photos are illustrative and do not depict girls in the Foundation&rsquo;s care.
+        </p>
       </div>
-      <SocialCards cards={cards} />
-      <p className="gallery-note">
-        Photos are illustrative and do not depict girls in the Foundation&rsquo;s care.
-      </p>
     </section>
   );
 }

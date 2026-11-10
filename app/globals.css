@@ -953,16 +953,9 @@ p {
   font-size: 1.6rem;
   color: var(--brand-800);
 }
-.gallery-hint {
-  text-align: center;
-  color: var(--brand-700);
-  font-weight: 500;
-  font-size: 0.95rem;
-  margin: 20px 0 4px;
-}
 .gallery-note {
   text-align: center;
   font-size: 0.85rem;
   color: var(--muted);
-  margin: 0;
+  margin: 20px 0 0;
 }

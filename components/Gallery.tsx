@@ -21,7 +21,6 @@ export default function Gallery({ eyebrow = "Gallery", title, intro, startAt = 0
       src: p.imgUrl,
       alt: p.alt,
       title: p.title,
-      description: p.alt,
     }))
   ).flat();
 
@@ -34,7 +33,6 @@ export default function Gallery({ eyebrow = "Gallery", title, intro, startAt = 0
           {intro && <p>{intro}</p>}
         </div>
         <SphereGallery images={images} />
-        <p className="gallery-hint">Drag to turn the sphere. Tap a photo to see it up close.</p>
         <p className="gallery-note">
           Photos are illustrative and do not depict girls in the Foundation&rsquo;s care.
         </p>

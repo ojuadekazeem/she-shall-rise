@@ -54,7 +54,7 @@ export default function GetInvolved() {
               <h2>{w.title}</h2>
               <p>{w.text}</p>
               <a
-                className="btn btn-plum"
+                className="btn btn-brand"
                 href={`mailto:${site.email}?subject=${encodeURIComponent(w.subject)}`}
               >
                 {w.action}

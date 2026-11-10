@@ -9,7 +9,7 @@ export default function NotFound() {
         <p className="lead" style={{ marginBottom: 28 }}>
           But her story isn&rsquo;t over, and neither is yours here.
         </p>
-        <Link href="/" className="btn btn-plum">
+        <Link href="/" className="btn btn-brand">
           Back to Home
         </Link>
       </div>

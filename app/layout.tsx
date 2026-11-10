@@ -37,9 +37,30 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Lets a link choose the color theme: add ?theme=teal or ?theme=purple to any
+ * page URL. The choice is kept for the rest of the visit (this browser tab).
+ * Runs before the page paints, so there is no flash of the other color.
+ */
+const themeFromLink = `(function(){try{
+var ok={purple:1,teal:1};
+var p=new URLSearchParams(location.search).get("theme");
+if(ok[p]){sessionStorage.setItem("ssr-theme",p);}
+var t=ok[p]?p:sessionStorage.getItem("ssr-theme");
+if(ok[t]){document.documentElement.setAttribute("data-theme",t);}
+}catch(e){}})();`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable} ${script.variable}`}>
+    <html
+      lang="en"
+      data-theme={site.theme}
+      className={`${serif.variable} ${sans.variable} ${script.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeFromLink }} />
+      </head>
       <body>
         <a href="#main" className="skip-link">
           Skip to content

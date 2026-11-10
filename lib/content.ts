@@ -1,4 +1,9 @@
 export const site = {
+  /**
+   * Default color theme: "purple" (matches the logo) or "teal".
+   * Visitors can also pick one by link: add ?theme=teal or ?theme=purple to any page URL.
+   */
+  theme: "purple" as "purple" | "teal",
   name: "She Shall Rise Foundation",
   tagline: "Rescue Her. Restore Her. Empower Her to Rise.",
   // TODO: replace with the Foundation's real contact details

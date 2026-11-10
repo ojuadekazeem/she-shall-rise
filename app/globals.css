@@ -1,12 +1,15 @@
-/* ---------- Brand tokens (taken from the She Shall Rise logo) ---------- */
+/* ---------- Brand tokens ----------
+ * Default theme is purple (from the logo). The teal theme below overrides
+ * the same tokens; pick one in lib/content.ts (site.theme).
+ */
 :root {
-  --plum-950: #1d0733;
-  --plum-900: #2a0c4a;
-  --plum-800: #3a1463;
-  --plum-700: #4b1f7a;
-  --plum-600: #5f2d93;
-  --plum-100: #f2ebf8;
-  --plum-50: #f9f6fc;
+  --brand-950: #1d0733;
+  --brand-900: #2a0c4a;
+  --brand-800: #3a1463;
+  --brand-700: #4b1f7a;
+  --brand-600: #5f2d93;
+  --brand-100: #f2ebf8;
+  --brand-50: #f9f6fc;
 
   --gold-600: #b5862c;
   --gold-500: #c99a3b;
@@ -24,8 +27,23 @@
   --font-script-stack: var(--font-script), "Brush Script MT", cursive;
 
   --radius: 14px;
-  --shadow: 0 10px 30px -12px rgba(42, 12, 74, 0.25);
+  --shadow: 0 10px 30px -12px color-mix(in srgb, var(--brand-900) 25%, transparent);
   --header-h: 76px;
+}
+
+/* Teal variation: same gold accents, deep teal in place of purple. */
+:root[data-theme="teal"] {
+  --brand-950: #032a2c;
+  --brand-900: #063d40;
+  --brand-800: #0a5054;
+  --brand-700: #0e6a6d;
+  --brand-600: #168787;
+  --brand-100: #e2f2f1;
+  --brand-50: #f3faf9;
+
+  --ink: #1e2c2d;
+  --muted: #5b6c6d;
+  --line: #dbe8e7;
 }
 
 *,
@@ -56,7 +74,7 @@ img {
 }
 
 a {
-  color: var(--plum-700);
+  color: var(--brand-700);
 }
 a:hover {
   color: var(--gold-600);
@@ -66,7 +84,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-serif-stack);
-  color: var(--plum-800);
+  color: var(--brand-800);
   line-height: 1.15;
   margin: 0 0 0.5em;
   font-weight: 700;
@@ -107,7 +125,7 @@ p {
   position: absolute;
   left: -999px;
   top: 8px;
-  background: var(--plum-700);
+  background: var(--brand-700);
   color: #fff;
   padding: 8px 14px;
   border-radius: 8px;
@@ -147,19 +165,19 @@ p {
 }
 .btn-gold {
   background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
-  color: var(--plum-950);
+  color: var(--brand-950);
   box-shadow: 0 6px 18px -6px rgba(201, 154, 59, 0.6);
 }
 .btn-gold:hover {
-  color: var(--plum-950);
+  color: var(--brand-950);
   background: linear-gradient(135deg, var(--gold-500), var(--gold-600));
 }
-.btn-plum {
-  background: var(--plum-700);
+.btn-brand {
+  background: var(--brand-700);
   color: #fff;
 }
-.btn-plum:hover {
-  background: var(--plum-800);
+.btn-brand:hover {
+  background: var(--brand-800);
   color: #fff;
 }
 .btn-outline-light {
@@ -168,7 +186,7 @@ p {
 }
 .btn-outline-light:hover {
   background: #fff;
-  color: var(--plum-800);
+  color: var(--brand-800);
 }
 
 /* ---------- Header ---------- */
@@ -192,7 +210,7 @@ p {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: var(--plum-800);
+  color: var(--brand-800);
 }
 .brand-mark {
   width: 52px;
@@ -219,7 +237,7 @@ p {
   font-size: 0.62rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--plum-700);
+  color: var(--brand-700);
   margin-top: 4px;
   font-weight: 600;
 }
@@ -253,7 +271,7 @@ p {
   transform: scaleX(1);
 }
 .site-nav a.active {
-  color: var(--plum-700);
+  color: var(--brand-700);
 }
 
 .menu-toggle {
@@ -270,7 +288,7 @@ p {
 .menu-toggle span {
   display: block;
   height: 2px;
-  background: var(--plum-800);
+  background: var(--brand-800);
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -321,7 +339,7 @@ p {
 .hero {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(120% 90% at 50% 0%, var(--plum-600) 0%, var(--plum-800) 45%, var(--plum-950) 100%);
+  background: radial-gradient(120% 90% at 50% 0%, var(--brand-600) 0%, var(--brand-800) 45%, var(--brand-950) 100%);
   color: #fff;
   padding: 88px 0 110px;
   text-align: center;
@@ -410,7 +428,7 @@ p {
   font-family: var(--font-serif-stack);
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--plum-800);
+  color: var(--brand-800);
   letter-spacing: 0.04em;
   position: relative;
 }
@@ -429,7 +447,7 @@ p {
   padding: 96px 0;
 }
 .section.tinted {
-  background: var(--plum-50);
+  background: var(--brand-50);
 }
 .section-head {
   text-align: center;
@@ -458,7 +476,7 @@ p {
 
 /* ---------- Core belief ---------- */
 .belief {
-  background: var(--plum-800);
+  background: var(--brand-800);
   color: #fff;
   padding: 88px 0;
   text-align: center;
@@ -507,12 +525,12 @@ p {
   position: absolute;
   inset: 0 0 auto 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--plum-700), var(--gold-500));
+  background: linear-gradient(90deg, var(--brand-700), var(--gold-500));
 }
 .program-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
-  border-color: var(--plum-100);
+  border-color: var(--brand-100);
   color: var(--ink);
 }
 .program-card p {
@@ -567,7 +585,7 @@ p {
 .promise-list li {
   font-family: var(--font-serif-stack);
   font-size: clamp(1.3rem, 2.6vw, 1.65rem);
-  color: var(--plum-800);
+  color: var(--brand-800);
   padding: 10px 0;
   border-bottom: 1px solid var(--line);
 }
@@ -582,7 +600,7 @@ p {
   display: block;
   font-family: var(--font-serif-stack);
   font-size: clamp(2.2rem, 5vw, 3.2rem);
-  color: var(--plum-800);
+  color: var(--brand-800);
   margin-top: 6px;
 }
 .promise-close .script,
@@ -592,7 +610,7 @@ p {
 
 /* ---------- CTA ---------- */
 .cta {
-  background: linear-gradient(135deg, var(--plum-900), var(--plum-700));
+  background: linear-gradient(135deg, var(--brand-900), var(--brand-700));
   color: rgba(255, 255, 255, 0.88);
   padding: 88px 0;
 }
@@ -606,7 +624,7 @@ p {
 
 /* ---------- Page hero ---------- */
 .page-hero {
-  background: linear-gradient(180deg, var(--plum-100), var(--cream));
+  background: linear-gradient(180deg, var(--brand-100), var(--cream));
   padding: 84px 0 56px;
   text-align: center;
 }
@@ -627,7 +645,7 @@ p {
   font-family: var(--font-serif-stack);
   font-size: clamp(1.5rem, 3vw, 2rem) !important;
   line-height: 1.35;
-  color: var(--plum-800);
+  color: var(--brand-800);
   border-left: 4px solid var(--gold-500);
   padding: 6px 0 6px 22px;
   margin: 36px 0;
@@ -662,8 +680,8 @@ p {
   margin: 44px 0 10px;
 }
 .we-will span {
-  background: var(--plum-100);
-  color: var(--plum-800);
+  background: var(--brand-100);
+  color: var(--brand-800);
   padding: 10px 20px;
   border-radius: 999px;
   font-weight: 600;
@@ -671,7 +689,7 @@ p {
 
 /* ---------- Declaration ---------- */
 .declaration {
-  background: radial-gradient(120% 100% at 50% 100%, var(--plum-700), var(--plum-950));
+  background: radial-gradient(120% 100% at 50% 100%, var(--brand-700), var(--brand-950));
   color: #fff;
   padding: 96px 0;
 }
@@ -759,15 +777,15 @@ p {
   font-family: var(--font-serif-stack);
   font-style: italic;
   font-size: 1.35rem;
-  color: var(--plum-600);
+  color: var(--brand-600);
   margin-top: -6px;
 }
 .program-closing {
-  background: var(--plum-50);
+  background: var(--brand-50);
   border-left: 4px solid var(--gold-500);
   padding: 16px 20px;
   border-radius: 0 10px 10px 0;
-  color: var(--plum-800);
+  color: var(--brand-800);
   font-weight: 500;
   margin-top: 8px;
 }
@@ -825,7 +843,7 @@ p {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--plum-950);
+  background: var(--brand-950);
   color: rgba(255, 255, 255, 0.75);
   padding-top: 72px;
 }
@@ -925,19 +943,19 @@ p {
 }
 /* Close button on the enlarged photo (bg-opacity-* no longer exists in Tailwind v4). */
 .sphere-gallery .fixed button {
-  background: rgba(29, 7, 51, 0.6);
+  background: color-mix(in srgb, var(--brand-950) 60%, transparent);
 }
 .sphere-gallery .fixed button:hover {
-  background: rgba(29, 7, 51, 0.85);
+  background: color-mix(in srgb, var(--brand-950) 85%, transparent);
 }
 .sphere-gallery .fixed h3 {
   font-family: var(--font-serif-stack);
   font-size: 1.6rem;
-  color: var(--plum-800);
+  color: var(--brand-800);
 }
 .gallery-hint {
   text-align: center;
-  color: var(--plum-700);
+  color: var(--brand-700);
   font-weight: 500;
   font-size: 0.95rem;
   margin: 20px 0 4px;
